@@ -4,8 +4,6 @@ import { ethers } from "ethers";
 import { useState } from "react";
 import ABI from "../contract/Portal.json";
 
-// import { Link } from "react-router-dom";
-
 export default function StudntPortal() {
   const [name, setName] = useState("");
   const [fname, setFname] = useState("");
@@ -117,7 +115,7 @@ export default function StudntPortal() {
           }}
           className="btn btn-info m-2"
         >
-          {metamaskcheck ? "Wallet connected" : "Connecte Wallet"}
+          {metamaskcheck ? "Connected" : "Connect Wallet"}
         </button>
       </form>
     </>
