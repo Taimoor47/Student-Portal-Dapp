@@ -7,7 +7,7 @@ import ABI from "../contract/Portal.json";
 export default function CheckResult() {
   const [cocntractdata, setContractData] = useState("");
   const [studentname, setStudentname] = useState(" ");
-  
+
   let contract;
   const Address = "0xa1c6f7a7078395a04a6dd13fb2f2f2cff8691c92";
   const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -23,7 +23,7 @@ export default function CheckResult() {
       console.log(phrase);
     } catch (err) {
       console.error(err);
-      if (err.errorName != "StudentNotExist") return;
+      if (err.errorName !== "StudentNotExist") return;
       setContractData("Student not found");
     }
   };
